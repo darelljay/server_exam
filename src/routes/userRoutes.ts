@@ -1,15 +1,18 @@
-import { Router } from "express";
+import {Router} from "express";
 import { businessController } from "../business/business.Controller";
 
-export class userRoute{
-    public router:Router = Router();
-    private businessControll:businessController
+export class UserRoute{
+    public businessController:businessController;
+    public router : Router = Router();
+
     constructor(){
-        this.businessControll = new businessController;
+        this.businessController = new businessController();
+        this.initializeRoutes();
     }
 
-    public userRoute(){
-        this.router.route("/users/:id/vocabulary/level").post(this.businessControll.getVocabularyLevel);
-        this.router.route("/users/word").get(this.businessControll.postWords);
-    }
+    public initializeRoutes() {
+        this.router.route("/users/word").get(this.businessController.postWords);
+        this.router.route("/users/:id/vocabulary/level").post(this.businessController.getVocabularyLevel);
+
+    }   
 }

@@ -19,7 +19,7 @@ async function insertRandomWords(totalRows, chunkSize) {
   const connection = await mysql.createConnection({
     host: "127.0.0.1",
     user: "root",
-    password: "root",
+    password: "1234",
     database: "hilokal_exam1",
   });
 
@@ -38,7 +38,7 @@ async function insertRandomWords(totalRows, chunkSize) {
       }
       const timeOffset = Math.floor(Math.random() * 31536000);
       const createdAt = new Date(Date.now() - timeOffset * 1000);
-      const userId = Math.floor(Math.random() * 50) + 1;
+      const userId =  Math.floor(Math.random() * 50) + 1;
 
       values.push([createdAt, userId, word]);
 
@@ -67,4 +67,5 @@ async function insertRandomWords(totalRows, chunkSize) {
   }
 }
 
-insertRandomWords(6000000, 5000);
+// insertRandomWords(6000000, 5000);
+insertRandomWords(1000, 5000);

@@ -1,4 +1,5 @@
-import "dotenv/config" 
+import "dotenv/config";
+
 import mysql from "mysql2/promise";
 export class DB{
     public DBConnection = async():Promise<any> =>{
@@ -10,7 +11,7 @@ export class DB{
         try {
           return connection;
         } catch (error) {
-           throw new Error(`Error at connection.ts: ${error.message}`); 
+           throw new Error(`Error at connection.ts: ${error}`); 
         }finally{
             await connection.end();
         }

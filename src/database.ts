@@ -4,7 +4,7 @@ async function dbQuery(query: string) {
   const connection = await mysql.createConnection({
     host: "127.0.0.1",
     user: "root",
-    password: "root",
+    password: "1234",
     database: "hilokal_exam1",
   });
 
