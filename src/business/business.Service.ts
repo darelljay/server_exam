@@ -8,6 +8,7 @@ export class businiessService{
     }
     public  getNumber = (value: any)=> {
         const number = Number(value);
+        console.log(number)
         if (value != null && Number.isFinite(number)) {
           return number;
         } else {

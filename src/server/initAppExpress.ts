@@ -8,4 +8,4 @@ export const initAppExpress = (app:Express): void =>{
 
     const userRoute = new UserRoute();
     app.use("/",userRoute.router);
-}   
+}

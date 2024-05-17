@@ -11,8 +11,8 @@ export class UserRoute{
     }
 
     public initializeRoutes() {
-        this.router.route("/users/word").get(this.businessController.postWords);
-        this.router.route("/users/:id/vocabulary/level").post(this.businessController.getVocabularyLevel);
+        this.router.route("/users/:id/vocabulary/level").get(this.businessController.getVocabularyLevel);
+        this.router.route("/users/word").post(this.businessController.postWords);
 
     }   
 }
