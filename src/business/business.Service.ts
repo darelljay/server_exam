@@ -8,12 +8,11 @@ export class businiessService{
     }
     public  getNumber = (value: any)=> {
         const number = Number(value);
-        console.log(number)
-        if (value != null && Number.isFinite(number)) {
-          return number;
-        } else {
-          throw new Error("Not a number");
-        }
+        
+        if (value != null && Number.isFinite(number)) return number;
+        
+        throw new Error("Not a number");
+        
       }
       
       public getUserVocabularyLevel = async(userId: number):Promise<number>=>{
