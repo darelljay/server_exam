@@ -6,6 +6,7 @@ export class businiessService{
     constructor(){
         this.database = new dbService();
     }
+    
     public  getNumber = (value: any)=> {
         const number = Number(value);
         

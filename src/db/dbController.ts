@@ -6,7 +6,7 @@ export class dbService {
     constructor(){
         this.db = new DB();
     }
-    // 리턴 타입을 몰라서 any로 했으니까 이따 알아서 바꾸셈
+
     public getWordCountFromDB = async(userId:any):Promise<any>=>{
         const query = `
         SELECT COUNT(*) as c
